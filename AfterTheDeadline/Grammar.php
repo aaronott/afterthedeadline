@@ -1,6 +1,6 @@
 <?php
 /**
- * Class for the stats endpoint
+ * Class for the checkGrammar endpoint
  *
  * PHP version 5.1.0+
  *
@@ -16,10 +16,10 @@
  * @link        http://www.afterthedeadline.com/development.slp
  */ 
 
-class AfterTheDeadline_Stats extends AfterTheDeadline_Common {
+class AfterTheDeadline_Grammar extends AfterTheDeadline_Common {
 
   /**
-   * Implementation of the get method to get the stats
+   * Implementation of the get method to check the grammar.
    *
    * @access public
    * @param $text
@@ -28,7 +28,7 @@ class AfterTheDeadline_Stats extends AfterTheDeadline_Common {
    *   Returns an object from the AfterTheDeadline reponse handler.
    */
   public function get($text) {
-    $endpoint = 'stats';
+    $endpoint = 'checkGrammar';
     return $this->send_request($endpoint, $text);
   }
 }

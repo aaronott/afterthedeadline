@@ -1,4 +1,7 @@
-After The Deadline is an online grammer checking system and this is just
-an implementation of the AtD system written in PHP
-
+After the Deadline is an open source grammar, style and spell checker.
 More information about the API may be found at: http://www.afterthedeadline.com/api.slp
+
+To run your own After the Deadline server: http://open.afterthedeadline.com/
+
+After the Deadline author:
+Mudge, Raphael S. (2009) After the Deadline – Language Checking Technology. Automattic. http://open.afterthedeadline.com.
