@@ -16,7 +16,10 @@
  * @link        http://www.afterthedeadline.com/development.slp
  */ 
 
-require_once 'AfterTheDeadline/Exception.php';
+$basepath = realpath(dirname(__FILE__));
+require_once $basepath . '/AfterTheDeadline/Exception.php';
+require_once $basepath . '/AfterTheDeadline/Common.php';
+
 abstract class AfterTheDeadline {
 
   /**
@@ -41,8 +44,9 @@ abstract class AfterTheDeadline {
    * The factory method for loading the right files.
    */
   public function factory($endPoint) {
+    $basepath = realpath(dirname(__FILE__));
     $file = 'AfterTheDeadline/' . $endPoint . '.php';
-    if (!include_once($file)) {
+    if (!include_once($basepath . '/' . $file)) {
       throw new AfterTheDeadline_Exception('Endpoint file not found: ' . $file);
     }
 

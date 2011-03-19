@@ -16,7 +16,8 @@
  * @link        http://www.afterthedeadline.com/development.slp
  */ 
 
-require 'AfterTheDeadline/Response.php';
+$basepath = realpath(dirname(__FILE__));
+require_once $basepath . '/Response.php';
 
 abstract class AfterTheDeadline_Common {
 
