@@ -19,6 +19,10 @@ class AfterTheDeadline_StatsTest extends PHPUnit_Framework_TestCase
 
   public function setUp() {
     $this->Stats = AfterTheDeadline::factory('Stats');
+
+    // Sleep because the server is throttling and will return bad results if
+    // we test too quickly.
+    sleep(1);
   }
 
   /**

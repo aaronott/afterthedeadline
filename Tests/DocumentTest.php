@@ -19,6 +19,10 @@ class AfterTheDeadline_DocumentTest extends PHPUnit_Framework_TestCase
 
   public function setUp() {
     $this->Document = AfterTheDeadline::factory('Document');
+
+    // Sleep because the server is throttling and will return bad results if
+    // we test too quickly.
+    sleep(1);
   }
 
   /**
